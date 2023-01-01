@@ -159,7 +159,7 @@ mainCanvas.addEventListener("click", function (e) {
   $parrafo.innerHTML = `<h1>${distanceHint}<h1>`;
 
   sound.play();
-
+ 
   //codigo para cuando se acerca demasiado y gana
   if (distance < 20 && distance > 0) {
     let corriendo2= corriendo;
