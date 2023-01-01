@@ -162,6 +162,7 @@ mainCanvas.addEventListener("click", function (e) {
 
   //codigo para cuando se acerca demasiado y gana
   if (distance < 20 && distance > 0) {
+    let corriendo2= corriendo;
     detener();
 
     drawVampi(xx, yy);
@@ -170,14 +171,23 @@ mainCanvas.addEventListener("click", function (e) {
 
     //pongo tiempo para que tarrde en mostrar el alerta
     function encontrado() {
-      alert(`Encontraste La Tumba Del Vampiro En : ${clicks} clicks`);
+
+      swal({
+        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +clicks /* + "clicks y En : " + corriendo2 */,
+        text: "Terminar",
+        icon: "success",
+        button: "OK",
+      });
+      /* 
+      alert(`Encontraste La Tumba Del Vampiro En : ${clicks} clicks`); */
     }
     setTimeout(encontrado, 1500);
+
     //pongo tiempo para el reinicio
     function reinicio() {
       location.reload();
     }
-    setTimeout(reinicio, 5000);
+    setTimeout(reinicio, 7000);
   }
 });
 
