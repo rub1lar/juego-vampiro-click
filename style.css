@@ -1,0 +1,139 @@
+
+.imagens {
+    padding-top: 1rem;
+    z-index :100;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+   background-size: contain;
+}
+
+.tamaño {
+    -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    cursor: pointer;
+    transition: 4s;    border: solid;
+    border-color: rgb(18, 18, 17);
+  
+ max-width: 500px;
+ min-width: none;
+}
+.imagens:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
+.titulo {
+    display:block;
+text-align: center;
+}
+.titulo2 {
+    font-size: 1.0rem;
+    color:aliceblue;
+text-align: center;
+}
+.main-cont {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.main-cont{
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fondo.jpg");
+    background-size: cover;
+}
+canvas {
+    background-image:url("img/fondo.jpg") ;
+    background-size: cover;
+}
+
+/*** ESTILOS BOTÓN GROW ELLIPSE ***/
+.ov-btn-grow-ellipse {
+    background: #fff; /* color de fondo */
+    color: #4741d7; /* color de fuente */
+    border: 2px solid #4741d7; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 40px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .ov-btn-grow-ellipse:hover {
+    color: #fff;/* color de fuente hover */
+  }
+  .ov-btn-grow-ellipse::after {
+    content: "";
+    background: #4741d7; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    transform: scale(0, 0);
+    transition: all 0.4s ease;
+  }
+  .ov-btn-grow-ellipse:hover::after {
+    transition: all 0.6s ease-out;
+    transform: scale(1, 1);
+  }
+
+  .playcrono {
+    -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
+    width: 350px;
+color: antiquewhite;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    border-color: black;
+    background-color: rgb(22, 22, 22);
+  }
+
+/* 
+  bOTON PLAY */
+  .button {
+    background-color: rgb(22, 22, 22);
+
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+    border-color: transparent transparent transparent #100cdb;
+    cursor: pointer;
+    will-change: border-width;
+    transition: all .2s ease;
+  }
+    .paused {
+      border-style: double;
+      border-width: 0px 0 0px 60px;
+    }
+    
+    button:hover {
+      border-color: transparent transparent transparent #221be1;
+    }
+  
+    .total{
+      display: flex;
+      flex-wrap: wrap;
+    }

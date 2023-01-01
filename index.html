@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="titulo pb-4">
+      <h1>A JUGAR!</h1>
+    </div>
+
+    <div class="imagens" id="imagens">
+      <canvas class="tamaño" id="main-canvas" width="520" height="410">
+      </canvas>
+
+      <div class="playcrono" width="400">
+        <div>
+          <h3>Musica</h3>
+          <button class="button" onclick="btn()"></button>
+        </div>
+
+        <p class="titulo2" id="parrafo"></p>
+        <div>
+          <span class="minutos"></span>
+          : <span class="segundos"></span> : <span class="centesimas"></span>
+        </div>
+
+        <!--   <div>
+          <button id="boton0" class="ov-btn-grow-ellipse">Reiniciar</button>
+          <button id="boton1" class="ov-btn-grow-ellipse">Iniciar</button>
+        </div> -->
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="funciones.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
