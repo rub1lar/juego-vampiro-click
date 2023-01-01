@@ -173,8 +173,8 @@ mainCanvas.addEventListener("click", function (e) {
     function encontrado() {
 
       swal({
-        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +clicks /* + "clicks y En : " + corriendo2 */,
-        text: "Terminar",
+        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +clicks +" CLICKS",
+        text: "game over",
         icon: "success",
         button: "OK",
       });
