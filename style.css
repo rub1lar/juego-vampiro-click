@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
 .imagens {
     padding-top: 1rem;
@@ -11,13 +12,16 @@
 }
 
 .tamaño {
+
+ 
   display: flex !important;
     -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     cursor: pointer;
     transition: 4s;    border: solid;
-    border-color: rgb(18, 18, 17);
+    border-color: rgb(10, 51, 149);
+    border-radius: 1rem;
   
  max-width: 500px;
  min-width: none;
@@ -27,13 +31,15 @@
     transition: 2s;
 }
 .titulo {
+  font-family: 'Rubik Bubbles', cursive;
     display:block;
 text-align: center;
 }
 .titulo2 {
-    font-size: 1.0rem;
+  font-weight: 370;
+  font-family: 'Rubik Bubbles', cursive;
+    font-size: 2rem;
     color:aliceblue;
-text-align: center;
 }
 .main-cont {
 
@@ -59,6 +65,24 @@ canvas {
     background-image:url("img/fondo.jpg") ;
     background-size: cover;
 }
+/* //cronomertro */
+
+
+.minutos {
+  font-weight: 320;
+  font-family: 'Rubik Bubbles', cursive;
+}
+
+.segundos {
+  font-weight: 320;
+  font-family: 'Rubik Bubbles', cursive;
+}
+
+.centesimas{
+  font-weight: 320;
+  font-family: 'Rubik Bubbles', cursive;
+}
+
 
 /*** ESTILOS BOTÓN GROW ELLIPSE ***/
 .ov-btn-grow-ellipse {
