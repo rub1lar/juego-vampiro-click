@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <link rel="stylesheet" type="text/css" href="style.css" />
-
+    <link rel="stylesheet" href="@sweetalert2/theme-dark/dark.css" />
     <title>Document</title>
   </head>
   <body>
@@ -20,25 +24,24 @@
         </canvas>
       </div>
 
-      <div class="playcrono" width="400">
+      <div class="playcrono">
         <div>
           <h3 class="titulo2">Musica</h3>
           <button class="button" onclick="btn()"></button>
         </div>
 
         <p id="parrafo"></p>
-        <div>
+
+        <div class="crono">
           <span class="minutos"></span>
           : <span class="segundos"></span> : <span class="centesimas"></span>
         </div>
-
-        <!--   <div>
-          <button id="boton0" class="ov-btn-grow-ellipse">Reiniciar</button>
-          <button id="boton1" class="ov-btn-grow-ellipse">Iniciar</button>
-        </div> -->
       </div>
     </div>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="funciones.js"></script>
     <script src="game.js"></script>

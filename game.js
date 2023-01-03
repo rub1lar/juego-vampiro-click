@@ -79,15 +79,24 @@ mainCanvas.addEventListener("click", function (e) {
 
     //pongo tiempo para que tarrde en mostrar el alerta
     function encontrado() {
-      swal({
-        title:
-          "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +
-          clicks +
-          " CLICKS",
-        text: "game over",
-        icon: "success",
-        button: "OK",
-      });
+      Swal.fire({
+        background: "rgb(10, 10, 10)",
+   
+        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +
+        clicks +
+        " CLICKS",
+        customClass: {
+          title: "alert",
+        },
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+        
+      })
+     
     }
     setTimeout(encontrado, 1500);
 
