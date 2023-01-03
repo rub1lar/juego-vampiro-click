@@ -31,6 +31,17 @@
     transform: scale(1.1);
     transition: 2s;
 }
+.audio {
+  display: flex;
+
+  color: rgb(0, 0, 0) !important;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
 .titulo {
   color: antiquewhite;
   padding-bottom: 1rem;
@@ -40,7 +51,7 @@ text-align: center;
 font-weight: 370;
 
 }
-.titulo2 {
+.titulo2 { display: inline-block;
   font-weight: 370;
   font-family: 'Rubik Bubbles', cursive;
     font-size: 2rem;
@@ -91,7 +102,7 @@ canvas {
 .alert {
   color: aliceblue !important;
   border-radius: 2rem !important;
-  font-weight: 350;
+  font-weight: 300;
   font-family: 'Rubik Bubbles', cursive;
 
 }

@@ -23,18 +23,25 @@
         <canvas class="tamaño" id="main-canvas" width="520" height="410">
         </canvas>
       </div>
-
-      <div class="playcrono">
+      <div class="player">
         <div>
-          <h3 class="titulo2">Musica</h3>
-          <button class="button" onclick="btn()"></button>
+          <audio
+            id="aud"
+            src="sound/kain.mp3"
+            controls=""
+            class="audio"
+          ></audio>
+          <!--     <br /><button onclick="btn()">Play/Pause</button> -->
+          <!--    <h3 class="titulo2">Musica</h3> <button class="button" onclick="btn()"></button> -->
         </div>
 
-        <p id="parrafo"></p>
+        <div class="playcrono">
+          <p id="parrafo"></p>
 
-        <div class="crono">
-          <span class="minutos"></span>
-          : <span class="segundos"></span> : <span class="centesimas"></span>
+          <div class="crono">
+            <span class="minutos"></span>
+            : <span class="segundos"></span> : <span class="centesimas"></span>
+          </div>
         </div>
       </div>
     </div>
