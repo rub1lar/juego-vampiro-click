@@ -53,3 +53,5 @@ $(document).ready(function() {
 //Uhmm la forma más sencilla es cambiando esa linea de alert, por una linea
  //que cree una imagen a traves de javascript https://www.w3schools.com/jsref/dom_obj_image.asp
  // y posicionandola con la coordenada del target.
+
+

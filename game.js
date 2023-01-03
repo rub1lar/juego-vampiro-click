@@ -1,8 +1,26 @@
-const WIDTH = 480;//es para donde va a caer el punto invisible que hay que descubir //cannvas
-const HEIGH = 380;//le pongo un poco menos para que no quede tan a la orilla de la pantalla
+let WIDTH = 480; //es para donde va a caer el punto invisible que hay que descubir //cannvas
+let HEIGH = 380; //le pongo un poco menos para que no quede tan a la orilla de la pantalla
+
+//TRATO DE CAMBIAR PIXELES DE DONDE CAE EL NUMERO  ALEATORIO ,POR MEDIO DE SCREEN.WIDTH Q TOMA EL ANCHO DE LA PANTALLA
+let imagns = document.getElementById("main-canvas").parentNode;
+
+function mobile(){
+  var altura = screen.width;
+
+  
+  if (altura < 420) 
+  imagns.innerHTML=(`   <div>
+  <canvas class="tamaño" id="main-canvas" width="320" height="210">
+  </canvas>
+  </div>`); 
+     alert ("pantalla mas chica") 
+      WIDTH = 300;
+     HEIGH= 200 ;
+     console.log(WIDTH)}
+     mobile(); 
 
 //captura de elemento y guarda el contexto
-const mainCanvas = document.getElementById("main-canvas");
+let mainCanvas = document.getElementById("main-canvas");
 const context = mainCanvas.getContext("2d");
 
 let initialX;
@@ -47,7 +65,7 @@ let segundos = 0;
 let centesimas = 0;
 
 let corriendo = null;
-let cambiar =false
+let cambiar = false;
 function dibujarTiempo() {
   spanMinutos.innerHTML = minutos;
   spanSegundos.innerHTML = segundos;
@@ -71,7 +89,7 @@ function reiniciar() {
 function accion1() {
   if (corriendo) {
     detener();
-   cambiar = false; //No deshabilitado.
+    cambiar = false; //No deshabilitado.
   } else {
     cambiar = true; //Si, deshabilitado!
     iniciar();
@@ -105,18 +123,15 @@ function iniciar() {
 
   corriendo = setInterval(incrementar, 10);
 
-
   /*  *setInterval arroja un valor que es un número
    *con el que luego se puede referenciar a ese intervalo (guardar en variable se puede)*/
-
 }
 
- function detener() {
+function detener() {
   clearInterval(corriendo);
 
   corriendo = null;
-
-} 
+}
 
 //para dibujar el tiempo desde el principio
 dibujarTiempo();
@@ -142,13 +157,23 @@ const drawVampi = (xx, yy) => {
 let $parrafo = document.getElementById("parrafo");
 let clicks = 0;
 
-let cont =0
-mainCanvas.addEventListener("click", function (e) {
-  if (cont ==0){
-      iniciar();
-      cont = cont+ 1;
-    }
-    
+let cont = 0;
+
+
+
+
+
+
+
+
+
+     
+     mainCanvas.addEventListener("click", function (e) {
+       if (cont == 0) {
+    iniciar();
+    cont = cont + 1;
+  }
+
   xx = e.offsetX;
   yy = e.offsetY;
   clicks++;
@@ -159,10 +184,10 @@ mainCanvas.addEventListener("click", function (e) {
   $parrafo.innerHTML = `<h1>${distanceHint}<h1>`;
 
   sound.play();
- 
+
   //codigo para cuando se acerca demasiado y gana
   if (distance < 20 && distance > 0) {
-    let corriendo2= corriendo;
+    let corriendo2 = corriendo;
     detener();
 
     drawVampi(xx, yy);
@@ -171,9 +196,11 @@ mainCanvas.addEventListener("click", function (e) {
 
     //pongo tiempo para que tarrde en mostrar el alerta
     function encontrado() {
-
       swal({
-        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +clicks +" CLICKS",
+        title:
+          "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +
+          clicks +
+          " CLICKS",
         text: "game over",
         icon: "success",
         button: "OK",
@@ -190,7 +217,6 @@ mainCanvas.addEventListener("click", function (e) {
     setTimeout(reinicio, 7000);
   }
 });
-
 
 $(document).ready(function () {
   var btn = $(".button");

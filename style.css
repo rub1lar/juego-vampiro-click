@@ -11,6 +11,7 @@
 }
 
 .tamaño {
+  display: flex !important;
     -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
@@ -95,6 +96,7 @@ canvas {
   }
 
   .playcrono {
+    margin-top: 2rem;
     -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
@@ -137,4 +139,12 @@ color: antiquewhite;
     .total{
       display: flex;
       flex-wrap: wrap;
+    }
+
+   @media (max-width: 480px) {
+/*     //puedo hacer una funcion que cambie todo el canvas en el html y ponga otro cambas con un width: 
+    y un heit mas chico para celular, centrado mas en el medio para abarcar mas tipos de celulares
+    pero para eso tengo que detectar que paso menos de 400 px quiza se pueda con un evento .
+    el windows.onresize detecta pero yto quiero desde una resolucion en especifica que detecte;
+    ;;; */
     }
