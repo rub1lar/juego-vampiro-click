@@ -300,7 +300,7 @@ button:hover {
 }
 
 @media (max-width: 580px) {
-  .parallax {
+  .parallax img{
     display: none;
   }
   .sec p {
