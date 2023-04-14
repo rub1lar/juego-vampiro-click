@@ -72,6 +72,12 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 580px) {
+  .instrucciones {
+    font-size: 1em;
+  }
+}
+
 .sec p {
   margin-left: 4rem;
   margin-right: 4rem;
