@@ -18,6 +18,7 @@ body {
   text-align: center;
 }
 
+
 .parallax {
 position: relative;
 display: flex;
@@ -264,7 +265,10 @@ color: antiquewhite;
       flex-wrap: wrap;
     }
 
-   @media (max-width: 480px) {
+   @media (max-width: 680px) {
+    section img{
+      display: none;
+    }
 /*     //puedo hacer una funcion que cambie todo el canvas en el html y ponga otro cambas con un width: 
     y un heit mas chico para celular, centrado mas en el medio para abarcar mas tipos de celulares
     pero para eso tengo que detectar que paso menos de 400 px quiza se pueda con un evento .
