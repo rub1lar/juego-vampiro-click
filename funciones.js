@@ -122,13 +122,7 @@ function detener() {
   corriendo = null;
 }
 
-function btn() {
-    if (kain.paused) {
-      kain.play();
-    } else {
-      kain.pause();
-    }
-  }
+
 
   //parallax //
 let text =document.getElementById ("text");
@@ -147,3 +141,37 @@ window.addEventListener(`scroll`, ()=> {
   gateLeft.style.left= value * 0.5 + "px";
   gateRight.style.left= value * -0.5 + "px";
 })
+
+
+
+
+
+
+
+
+
+/////boron play
+
+function btn() {
+  if (kain.paused) {
+    kain.play();
+  } else {
+    kain.pause();
+  }
+}
+
+const play = document.querySelector(".play");
+const pause = document.querySelector(".pause");
+const playBtn = document.querySelector(".circle__btn");
+const wave1 = document.querySelector(".circle__back-1");
+const wave2 = document.querySelector(".circle__back-2");
+
+playBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  btn();
+  play.classList.toggle("visibility");
+  pause.classList.toggle("visibility");
+  playBtn.classList.toggle("shadow");
+  wave1.classList.toggle("paused");
+  wave2.classList.toggle("paused");
+});

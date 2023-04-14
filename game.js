@@ -66,6 +66,7 @@ mainCanvas.addEventListener("click", function (e) {
   console.log(distance); // para ver en consolelog que
   drawRect(xx, yy); // pasar parametro de coordinadas//
   $parrafo.innerHTML = `<h1 class="titulo2" >${distanceHint}<h1>`;
+  
   sound.play();
 
   //codigo para cuando se acerca demasiado y gana
