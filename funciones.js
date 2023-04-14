@@ -41,24 +41,22 @@ $(document).ready(function() {
 //TRATO DE CAMBIAR PIXELES DE DONDE CAE EL NUMERO  ALEATORIO ,POR MEDIO DE SCREEN.WIDTH Q TOMA EL ANCHO DE LA PANTALLA
 let imagns = document.getElementById("main-canvas").parentNode;
 
-function mobile(){
+function mobile() {
   var altura = screen.width;
 
-  if (altura < 420) 
-  imagns.innerHTML=(`   <div>
+  if (altura < 420)
+    imagns.innerHTML = `   <div>
   <canvas class="tamaño" id="main-canvas" width="320" height="210">
   </canvas>
-  </div>`); 
-      WIDTH = 300;
-     HEIGH= 200 ;
-     console.log(WIDTH)}
+  </div>`;
+  WIDTH = 300;
+  HEIGH = 200;
+  console.log(WIDTH);
+}
 
-
-     
 const spanMinutos = document.querySelector(".minutos");
 const spanSegundos = document.querySelector(".segundos");
 const spanCentesimas = document.querySelector(".centesimas");
-
 
 let minutos = 0;
 let segundos = 0;
@@ -122,35 +120,23 @@ function detener() {
   corriendo = null;
 }
 
+//parallax //
+let text = document.getElementById("text");
+let treeLeft = document.getElementById("tree-left");
+let treeRight = document.getElementById("tree-right");
+let gateLeft = document.getElementById("gate-left");
+let gateRight = document.getElementById("gate-right");
 
-
-  //parallax //
-let text =document.getElementById ("text");
-let treeLeft =document.getElementById ("tree-left");
-let treeRight =document.getElementById ("tree-right");
-let gateLeft =document.getElementById ("gate-left");
-let gateRight =document.getElementById ("gate-right");
-
-
-
-window.addEventListener(`scroll`, ()=> {
+window.addEventListener(`scroll`, () => {
   let value = window.scrollY;
-  text.style.marginTop= value *2.5 + "px";
-  treeLeft.style.left= value * -1.5 + "px";
-  treeRight.style.left= value * 1.5 + "px";
-  gateLeft.style.left= value * 0.5 + "px";
-  gateRight.style.left= value * -0.5 + "px";
-})
+  text.style.marginTop = value * 2.5 + "px";
+  treeLeft.style.left = value * -1.5 + "px";
+  treeRight.style.left = value * 1.5 + "px";
+  gateLeft.style.left = value * 0.5 + "px";
+  gateRight.style.left = value * -0.5 + "px";
+});
 
-
-
-
-
-
-
-
-
-/////boron play
+/////boton play
 
 function btn() {
   if (kain.paused) {

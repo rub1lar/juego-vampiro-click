@@ -66,7 +66,7 @@ mainCanvas.addEventListener("click", function (e) {
   console.log(distance); // para ver en consolelog que
   drawRect(xx, yy); // pasar parametro de coordinadas//
   $parrafo.innerHTML = `<h1 class="titulo2" >${distanceHint}<h1>`;
-  
+
   sound.play();
 
   //codigo para cuando se acerca demasiado y gana
@@ -82,22 +82,21 @@ mainCanvas.addEventListener("click", function (e) {
     function encontrado() {
       Swal.fire({
         background: "rgb(10, 10, 10)",
-   
-        title: "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +
-        clicks +
-        " CLICKS",
+
+        title:
+          "Buen Trabajo, Encontramos La Tumba Del Vampiro En :" +
+          clicks +
+          " CLICKS",
         customClass: {
           title: "alert",
         },
         showClass: {
-          popup: 'animate__animated animate__fadeInDown'
+          popup: "animate__animated animate__fadeInDown",
         },
         hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        }
-        
-      })
-     
+          popup: "animate__animated animate__fadeOutUp",
+        },
+      });
     }
     setTimeout(encontrado, 1500);
 
@@ -116,5 +115,3 @@ $(document).ready(function () {
     return false;
   });
 });
-
-
