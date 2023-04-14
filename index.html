@@ -14,37 +14,50 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="titulo pb-4">
-      <h1>A JUGAR!</h1>
-    </div>
-
-    <div class="imagens" id="imagens">
-      <div>
-        <canvas class="tamaño" id="main-canvas" width="520" height="410">
-        </canvas>
-      </div>
-      <div class="player">
+    <section class="parallax d-flex">
+      <h2 id="text" class="title">Bienvenidos A<br>La Tumba Del <br> Vampiro</h2>
+   
+      <img src="img/tree-left.png" id="tree-left" />
+      <img src="img/tree-right.png" id="tree-right" />
+      <img src="img/gate-left.png" id="gate-left" />
+      <img src="img/gate-right.png" id="gate-right" />
+      <img src="img/grass.png" id="grass" />
+    </section>
+    <section class="sec">
+      <h2 class="instrucciones">Instrucciones De Juego</h2>
+      <p>
+        Deberas encontrar la tumba del vampiro para acabar con el mal en la tierra!
+        Para comenzar deberas hacer click en alguna parte del mapa y por medio del cuadro de ayuda
+        te guiaras que tan cerca o lejos estas de encontrarla, mucha suerte!
+        <br /><br />
+      </p>
+    </section>
+    <section class="sec2" id="jugar">
+      <div class="imagens" id="imagens">
         <div>
-          <audio
-            id="aud"
-            src="sound/kain.mp3"
-            controls=""
-            class="audio"
-          ></audio>
-          <!--     <br /><button onclick="btn()">Play/Pause</button> -->
-          <!--    <h3 class="titulo2">Musica</h3> <button class="button" onclick="btn()"></button> -->
+          <canvas class="tamaño" id="main-canvas" width="520" height="410">
+          </canvas>
         </div>
-
-        <div class="playcrono">
-          <p id="parrafo"></p>
-
-          <div class="crono">
-            <span class="minutos"></span>
-            : <span class="segundos"></span> : <span class="centesimas"></span>
+       <!--  <div class="player">
+          <div>
+            <audio
+              id="aud"
+              src="sound/kain.mp3"
+              controls=""
+              class="audio"
+            ></audio>
+          </div> -->
+          <div class="playcrono">
+            <p id="parrafo"></p>
+            <div class="crono">
+              <span class="minutos"></span>
+              : <span class="segundos"></span> :
+              <span class="centesimas"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>

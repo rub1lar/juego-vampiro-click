@@ -1,13 +1,91 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+}
+.title {
+  font-weight: 70;
+  color: red;
+  font-family: 'Rubik Bubbles', cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.parallax {
+position: relative;
+display: flex;
+justify-content: center;
+align-items:center ;
+height: 100vh;
+background: url("img/background.png") no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.parallax img {
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+pointer-events: none;
+
+}
+.parallax img#gate-left{
+  position: fixed;
+transform: translateX(-282px);
+}
+
+.parallax img#gate-right{
+  position: fixed;
+
+  transform: translateX(305px);
+  }
+
+  .sec {
+    
+    position: relative;
+    background: #020912;
+    padding: 30px 100px;
+  }
+  .sec2 {
+    position: relative;
+    background: #020912;
+    padding: 30px 100px;
+  }
+  .instrucciones{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+.sec p{
+margin-left:4rem;
+margin-right:4rem;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: #fff;
+  font-weight: 300;
+  text-align: justify;
+}
+  
 .imagens {
     padding-top: 1rem;
     z-index :100;
     display: flex;
-  
+ 
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
    background-size: contain;
 }
@@ -68,13 +146,6 @@ font-weight: 370;
 
 
 .main-cont{
-    background-size: cover;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("img/fondo.jpg");
     background-size: cover;
 }
 canvas {
@@ -148,7 +219,7 @@ canvas {
     max-height: 300px;
 
     max-width: 400px;
-    margin-top: 2rem;
+    margin: 3rem;
     -webkit-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     -moz-box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
     box-shadow: 4px -9px 34px 39px rgba(14,14,15,1);
