@@ -301,6 +301,7 @@ button:hover {
 
 @media (max-width: 580px) {
   .sec p {
+    font-size: 1em;
     margin-left: 1rem;
     margin-right: 1rem;
   }
